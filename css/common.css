@@ -19,11 +19,8 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 	list-style: outside none none;
 	color: #535353;
 }
-img {
+.clearfix{
 	border: 0;
-}
-.clearfix:after {/*for modern browser*/
-	content: ".";
 	display: block;
 	height: 0;
 	clear: both;
@@ -35,6 +32,16 @@ img {
 
 /* ここまでリセット用のCSS */
 
+
+
+h3{
+    font-size:16px;
+    line-height:120%;
+        font-family:"Open Sans Condensed" ,sans-serif;
+        font-weight:300px;
+        letter-spacing:0.2em;
+        margin-bottom:30px;
+}
 #wrapper{
     width:100%;
     margin:0 auto;
@@ -100,11 +107,9 @@ img {
 
 #content{
     width:100%;
-    height:1800px;
     padding-left:0;
     margin:0 auto;
 
-    background:red;
 }
 
 #logo{
@@ -138,6 +143,8 @@ img {
 .pagetop:hover{
     opacity:1;
 }
+
+
 
 #foot{
     text-align:center;
