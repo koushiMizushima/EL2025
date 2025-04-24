@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+h3 {/*小見出し */
+	font-size: 16px;
+	line-height: 120%;
+	font-family: "Open Sans Condensed", sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.2em;
+	margin-bottom: 30px;
+}
+
+/*各エリアの区切りで上下余白をとる共通設定 */
+#greeting, #works, #news {
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+/*ここから#works関連 */
+#works {
+	max-width: 960px;
+	margin: 0px auto;
+	text-align: center;
+}
+#works ul {
+	margin-bottom: 10px;
+	margin: 20px auto 20px;
+}
+#works ul li {
+	margin-bottom: 10px;
+}
+a.thumnail {
+	display: block;
+	/*float: left;*/
+	overflow: hidden;/* width: 25%;*/
+}
+.thumnail img {
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	width: 100%;
+	vertical-align: bottom;
+}
+.thumnail figure {
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+.thumnail figcaption {
+	background-color: rgba(136,104,0,0.60);
+	color: #FFF;
+	opacity: 0;
+	font-size: 16px;
+	font-size: 1.6em;
+	position: absolute;
+	text-align: center;
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	padding-top: 35%;
+}
+a:hover>figure img {
+	transform: scale(1.15, 1.15);
+	-webkit-transform: scale(1.15, 1.15);
+	-moz-transform: scale(1.15, 1.15);
+	-ms-transform: scale(1.15, 1.15);
+	-o-transform: scale(1.15, 1.15);
+}
+a:hover>figure figcaption {
+	opacity: 1;
+}
+
+
+/*ここまでworks(masonry)関連*/
+

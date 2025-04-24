@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* スライダーで使用するCSS*/
+
+#slider {
+	margin-top: 70px;
+}
+
+@media only screen and (min-width: 769px) {
+	#slider {
+		margin-top:0;
+	}
+}
