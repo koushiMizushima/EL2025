@@ -1,0 +1,71 @@
+/*
+
+まずは自動でついてしまう余白を消したり
+基本となるフォントおよびサイズを指定したり
+箇条書きのマークを消したり画像の枠を消したりという
+いわゆる「リセットCSS」を記述。
+Yahooなどで配布されているものを読み込んでもかまいません。
+
+*/
+body {/* ページ全体の設定 */
+	font: 13px/1.231 "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;/* YUI3 CSS Fonts */
+ *font-size:small;/* IE用 */
+ *font:x-small;/* IE 互換モード用 */
+	color: #333;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0px;
+	padding: 0px;
+	list-style: outside none none;
+	color: #535353;
+}
+img {
+	border: 0;
+}
+.clearfix:after {/*for modern browser*/
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	zoom: 1;/*for IE 5.5-7*/
+}
+
+/* ここまでリセット用のCSS */
+
+#wrapper{
+    width:100%;
+    margin:0 auto;
+    overflow:hidden;
+}
+
+#head{
+    background:blue;
+}
+
+#content{
+    width:100%;
+    padding-left:0;
+    margin:0 auto;
+
+    background:red;
+}
+
+#foot{
+    background:yellow;
+}
+
+
+@media screen and (min-width:769px){/*元サイトとは異なり「min」にしている。*/
+  /*よって以下は横幅768pxを1pxでも超えたら（769pxに到達したら）適用される*/
+  
+
+
+    #content{
+        padding-left:180px;
+        width:calc(100% - 180px);
+        text-align:center;
+    }
+}
