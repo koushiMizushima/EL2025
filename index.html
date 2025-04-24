@@ -16,6 +16,9 @@
         <script src="js/jquery.drawer.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
         <link rel="stylesheet" href="css/drawer.css">
+        <script src="js/pageTop.js"></script> <!--ページトップ移動 -->
+        <script src="js/anchor.js"></script> <!--ページ内移動 -->
+
         <script>
             $(document).ready(function () {
                 $(".drawer").drawer();//class="drawer"を持つ要素にdrawerを設定する
@@ -29,7 +32,7 @@
                 <span class="sr-only">toggle navigation</span>
                 <span class="drawer-hamburger-icon"></span>
             </button>
-            <header id="head" class="drawer-main drawer-default" style="opacity:1;">
+            <header id="head" class="drawer-main drawer-default">
                 <nav class="drawer-nav" role="navigation">
                     <ul class="drawer-nav-list">
                         <li><a href="">greeting</a></li>
@@ -48,9 +51,23 @@
                     </li>
                 </ul>
             </header>
-            <main id="content">あああ</main>
+            <main id="content">
+                <div id="logo"><a href="index.html"><img src="img/logo.png" alt="ロゴ"></a></div>
+                <p class="pagetop"><a href="#wrapper"><img src="img/pagetop.png" alt="pageTop"></a></p>
+
+
+            </main>
             <footer id="foot">
-                <p>Copyright &copy; earth&amp;life.All Right Reserved</p>
+                <div id="footer_inside">
+                    <div id="name">アース＆ライフ<br>一級建築士事務所</div>
+                    <address>
+                        〒890-0053　鹿児島県鹿児島市中央町18-1<br>
+                        TEL099-000-0000　 FAX099-000-0001
+                    </address>
+                </div>
+                <div>
+                    <p>Copyright &copy; earth&amp;life.All Right Reserved</p>
+                </div>
             </footer>
         </div>
     </body>
