@@ -25,31 +25,45 @@
 
 
 
-.btn{
-    width:140px;
-    border:1px solid #f9be00;
-    font-size:1em;/*意味ある？*/
-    line-height:120%;
-    font-weight:300;/*意味ある？*/
-    letter-spacing:0.3em;
-    margin:10px auto 100px;
+#news{
+    max-width:960px;
+    margin:20px auto 80px;
+    padding:0 10px 100px;
+    text-align:center;
 }
 
-.btn a{
-    font-weight:900;
-    display:block;
-    padding:10px;
-    color:#f9be00;
-    transition:
-    background-color 0.6s ease 0s,
-    background-image 0.6 ease 0s,
-    color 0.6s ease 0s;
-    text-decoration:none;
+#news dl{
+    text-align:left;
+    font-size:15px;
+    width:90%;
+    margin:0 auto;
+}
+#news dt{
+    font-style:italic;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing:0.03em;
 }
 
-.btn a:hover{
-    background-color:#f9be00;
-    color:#fff;
+#news dd{
+    padding:20px 30px;
+    border-bottom:1px solid #adadad;
+    margin-bottom:1em;
 }
 
+@media screen and (min-width:769px){
 
+    #news dl{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    #news dt{
+        width: 177px;
+         border-bottom:1px solid #adadad;
+    margin-bottom:1em;
+    }
+    #news dd{
+        padding-top:0;
+        box-sizing:border-box;
+        width :calc(100% - 177px);
+    }
+}

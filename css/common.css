@@ -109,7 +109,7 @@ h3{
     width:100%;
     padding-left:0;
     margin:0 auto;
-
+    text-align:center;
 }
 
 #logo{
@@ -154,21 +154,76 @@ h3{
 
 #footer_inside{
     display:flex;
+    flex-direction:column;
+    align-items:center;
     justify-content:center;
     background-color:#f2f2f2;
     margin-bottom:100px;
     font-size:13px;
+    padding:1.5em 0;
 }
 
 #name{
     width:120px;
     border:1px solid #8b8b8b;
     line-height:1.5em;
+    margin-bottom:1.5em;
+}
+
+#name a{
+    padding:5px;
+    text-decoration:none;
+    color:#535353;
+    display:block;
+    transition:
+    background-color 0.6s ease 0s,
+    color 0.6s ease 0s;
+}
+#name a:hover{
+    background-color:#535353;
+    color:#fff;
 }
 
 #footer_inside address{
     width:calc(100% - 120px - 20px);
     max-width:330px;
+    text-align:center;
+}
+
+
+#footer_inside address span{
+    white-space:nowrap;
+    display:inline-block;
+}
+
+
+
+
+.btn{
+    width:140px;
+    border:1px solid #f9be00;
+    font-size:1em;/*意味ある？*/
+    line-height:120%;
+    font-weight:300;/*意味ある？*/
+    letter-spacing:0.3em;
+    margin:10px auto 100px;
+}
+
+.btn a{
+    font-weight:900;
+    display:block;
+    padding:10px;
+    color:#f9be00;
+    transition:
+    background-color 0.6s ease 0s,
+    background-image 0.6s ease 0s,
+    color 0.6s ease 0s;
+    text-decoration:none;
+}
+
+.btn a:hover{
+    background-color:#f9be00;
+    color:#fff;
 }
 
 @media screen and (min-width:769px){/*元サイトとは異なり「min」にしている。*/
@@ -200,8 +255,12 @@ h3{
 
     #foot{
         max-width:960px;
+        padding-left:180px;
     }
 
+    #footer_inside address span:nth-child(even){
+        margin-left:1em;
+    }
 
 
 }
