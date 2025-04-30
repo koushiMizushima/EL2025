@@ -1,259 +1,260 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-        <meta charset="utf-8">
-        <title>鹿児島 住宅・ハウスメーカー | アース＆ライフ建築設計事務所</title>
-        <meta name="robots" content="noindex">
-        <meta name="description" itemprop="description"
-            content="鹿児島市の一級建築事務所アース＆ライフは鹿児島の家づくりのパートナーになれるよう日々努力しております。土地探しから設計、建築までトータルでサポートいたします。">
-        <meta name="keywords" itemprop="keywords" content="鹿児島,注文住宅,健康住宅,建築,設計,土地探し,光触媒">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/common.css">
-        <script src="js/jquery-1.10.2.min.js"></script>
-        <script src="js/jquery.drawer.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
-        <link rel="stylesheet" href="css/drawer.css">
-        <script src="js/jquery.bxslider.min.js"></script>
-        <link rel="stylesheet" href="css/jquery.bxslider.css">
-        <link rel="stylesheet" href="css/slider.css">
-        <script src="js/masonry.pkgd.min.js"></script>
-        <link rel="stylesheet" href="css/masonry.css">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <meta charset="utf-8">
+    <title>鹿児島 住宅・ハウスメーカー | アース＆ライフ建築設計事務所</title>
+    <meta name="robots" content="noindex">
+    <meta name="description" itemprop="description"
+        content="鹿児島市の一級建築事務所アース＆ライフは鹿児島の家づくりのパートナーになれるよう日々努力しております。土地探しから設計、建築までトータルでサポートいたします。">
+    <meta name="keywords" itemprop="keywords" content="鹿児島,注文住宅,健康住宅,建築,設計,土地探し,光触媒">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.drawer.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+    <link rel="stylesheet" href="css/drawer.css">
+    <script src="js/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <script src="js/masonry.pkgd.min.js"></script>
+    <link rel="stylesheet" href="css/masonry.css">
 
-        <script src="js/pageTop.js"></script> <!--ページトップ移動 -->
-        <script src="js/anchor.js"></script> <!--ページ内移動 -->
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/masonry_custom.css">
+    <script src="js/pageTop.js"></script> <!--ページトップ移動 -->
+    <script src="js/anchor.js"></script> <!--ページ内移動 -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/masonry_custom.css">
 
 
-        <script>
-            $(document).ready(function () {
-                $(".drawer").drawer();//class="drawer"を持つ要素にdrawerを設定する
+    <script>
+        $(document).ready(function () {
+            $(".drawer").drawer();//class="drawer"を持つ要素にdrawerを設定する
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                auto: true,
+                pause: 10000,
+                speed: 2000,
+                mode: 'fade',
+                pager: false,
+                controls: false,
             });
-        </script>
+        });
+    </script>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('.slider').bxSlider({
-                    auto: true,
-                    pause: 10000,
-                    speed: 2000,
-                    mode: 'fade',
-                    pager: false,
-                    controls: false,
-                });
+    <script type="text/javascript">
+        $(function () {
+            $('#masonry').masonry({
+                itemSelector: '.box',
+                columnWidth: 320,
+                isAnimated: true,
+                isFitWidth: true,
+                isRTL: false,
+                gutterWidth: 0,
+                isResizable: true,
             });
-        </script>
+        });
+    </script>
+    <!--ページトップ移動-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var pagetop = $('.pagetop');
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    pagetop.fadeIn();
+                } else {
+                    pagetop.fadeOut();
+                }
+            });
+            pagetop.click(function () {
+                $('body, html').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        });
+    </script>
+    <!--アンカー移動-->
+    <script>
+        $(document).ready(function () {
+            // #で始まるアンカーをクリックした場合に処理
+            $('a[href^=#]').click(function () {
+                // スクロールの速度
+                var speed = 500; // ミリ秒
+                // アンカーの値取得
+                var href = $(this).attr("href");
+                // 移動先を取得
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                // 移動先を数値で取得
+                var position = target.offset().top;
+                // スムーススクロール
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+</head>
 
-        <script type="text/javascript">
-            $(function () {
-                $('#masonry').masonry({
-                    itemSelector: '.box',
-                    columnWidth: 320,
-                    isAnimated: true,
-                    isFitWidth: true,
-                    isRTL: false,
-                    gutterWidth: 0,
-                    isResizable: true,
-                });
-            });
-        </script>
-        <!--ページトップ移動-->
-        <script type="text/javascript">
-            $(document).ready(function () {
-                var pagetop = $('.pagetop');
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() > 100) {
-                        pagetop.fadeIn();
-                    } else {
-                        pagetop.fadeOut();
-                    }
-                });
-                pagetop.click(function () {
-                    $('body, html').animate({ scrollTop: 0 }, 500);
-                    return false;
-                });
-            });
-        </script>
-        <!--アンカー移動-->
-        <script>
-            $(document).ready(function () {
-                // #で始まるアンカーをクリックした場合に処理
-                $('a[href^=#]').click(function () {
-                    // スクロールの速度
-                    var speed = 500; // ミリ秒
-                    // アンカーの値取得
-                    var href = $(this).attr("href");
-                    // 移動先を取得
-                    var target = $(href == "#" || href == "" ? 'html' : href);
-                    // 移動先を数値で取得
-                    var position = target.offset().top;
-                    // スムーススクロール
-                    $('body,html').animate({ scrollTop: position }, speed, 'swing');
-                    return false;
-                });
-            });
-        </script>
-    </head>
-
-    <body id="home" class="drawer drawer--left">
-        <div id="wrapper">
-            <button class="drawer-toggle drawer-hamburger">
-                <span class="sr-only">toggle navigation</span>
-                <span class="drawer-hamburger-icon"></span>
-            </button>
-            <header id="head" class="drawer-main drawer-default">
-                <nav class="drawer-nav" role="navigation">
-                    <ul class="drawer-nav-list">
-                        <li><a href="index.html#greeting">greeting</a></li>
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="news.html">news</a></li>
-                        <li><a href="works.html">works</a></li>
-                        <li><a href="access.html">access</a></li>
-                    </ul>
-                </nav>
-                <ul id="snsNavi1">
-                    <li>
-                        <a href="#" target="_blank"><img src="img/icnFace.png" alt="Facebook"></a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank"><img src="img/icoFeed.png" alt="Feed"></a>
-                    </li>
+<body id="home" class="drawer drawer--left">
+    <div id="wrapper">
+        <button class="drawer-toggle drawer-hamburger">
+            <span class="sr-only">toggle navigation</span>
+            <span class="drawer-hamburger-icon"></span>
+        </button>
+        <header id="head" class="drawer-main drawer-default">
+            <nav class="drawer-nav" role="navigation">
+                <ul class="drawer-nav-list">
+                    <li><a href="index.html#greeting">greeting</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="news.html">news</a></li>
+                    <li><a href="works.html">works</a></li>
+                    <li><a href="access.html">access</a></li>
                 </ul>
-            </header>
-            <main id="content">
-                <div id="logo"><a href="index.html"><img src="img/logo.png" alt="ロゴ"></a></div>
-                <div id="slider">
-                    <ul class="slider">
-                        <li><img src="img/main01.jpg" alt="モデルハウスリビング"></li>
-                        <li><img src="img/main02.jpg" alt="モデルハウス外観"></li>
-                        <li><img src="img/main03.jpg" alt="カウンターバー"></li>
-                    </ul>
+            </nav>
+            <ul id="snsNavi1">
+                <li>
+                    <a href="#" target="_blank"><img src="img/icnFace.png" alt="Facebook"></a>
+                </li>
+                <li>
+                    <a href="#" target="_blank"><img src="img/icoFeed.png" alt="Feed"></a>
+                </li>
+            </ul>
+        </header>
+        <main id="content">
+            <div id="logo"><a href="index.html"><img src="img/logo.png" alt="ロゴ"></a></div>
+            <div id="slider">
+                <ul class="slider">
+                    <li><img src="img/main01.jpg" alt="モデルハウスリビング"></li>
+                    <li><img src="img/main02.jpg" alt="モデルハウス外観"></li>
+                    <li><img src="img/main03.jpg" alt="カウンターバー"></li>
+                </ul>
+            </div>
+            <div id="greeting">
+                <h2>ごあいさつ</h2>
+                <h3>greeting</h3>
+                <div id="title">
+                    <h4>大地とともに暮らそう。</h4>
                 </div>
-                <div id="greeting">
-                    <h2>ごあいさつ</h2>
-                    <h3>greeting</h3>
-                    <div id="title">
-                        <h4>大地とともに暮らそう。</h4>
-                    </div>
-                    <p>鹿児島県鹿児島市にある一級建築設計事務所「アース＆ライフ」です。<br>
-                        「家族」を守る「家」をつくる。それが私たちの仕事です。<br>
-                        しかし、私たちが守りたいものは家族だけではありません。<br>
-                        家は大地に建てられ、その大地と木々と川とともに共存するからこそ、<br>
-                        そこで暮らす家族に幸せが訪れるのだと考えます。<br>
-                        だからこそ私たちのつくる「家」は、そこに建てられる「土地」から考え設計していきます。<br>
-                        土地に根を張り大地とともに生活しよう。<br>
-                        それが私たち「Earth&amp;Life」のコンセプトです。 </p>
-                </div>
+                <p>鹿児島県鹿児島市にある一級建築設計事務所「アース＆ライフ」です。<br>
+                    「家族」を守る「家」をつくる。それが私たちの仕事です。<br>
+                    しかし、私たちが守りたいものは家族だけではありません。<br>
+                    家は大地に建てられ、その大地と木々と川とともに共存するからこそ、<br>
+                    そこで暮らす家族に幸せが訪れるのだと考えます。<br>
+                    だからこそ私たちのつくる「家」は、そこに建てられる「土地」から考え設計していきます。<br>
+                    土地に根を張り大地とともに生活しよう。<br>
+                    それが私たち「Earth&amp;Life」のコンセプトです。 </p>
+            </div>
 
 
-                <div id="works">
-                    <h2>施工実績</h2>
-                    <h3>works</h3>
-                    <ul id="masonry">
-                        <li class="box">
-                            <a href="#" class="thumnail">
-                                <figure>
-                                    <img src="img/sample_photo1.jpg" alt="鹿児島市常設モデルリビング">
-                                    <figcaption>
-                                        鹿児島市<br>
-                                        常設モデル
-                                    </figcaption>
-                                </figure>
-                            </a>
+            <div id="works">
+                <h2>施工実績</h2>
+                <h3>works</h3>
+                <ul id="masonry">
+                    <li class="box">
+                        <a href="#" class="thumnail">
+                            <figure>
+                                <img src="img/sample_photo1.jpg" alt="鹿児島市常設モデルリビング">
+                                <figcaption>
+                                    鹿児島市<br>
+                                    常設モデル
+                                </figcaption>
+                            </figure>
+                        </a>
 
-                        </li>
-                        <li class="box">
-                            <a href="#" class="thumnail">
+                    </li>
+                    <li class="box">
+                        <a href="#" class="thumnail">
+                            <figure>
                                 <img src="img/sample_photo2.jpg" alt="鹿児島市T様リビング">
                                 <figcaption>
                                     鹿児島市<br>
                                     T様邸
                                 </figcaption>
-                                </figure>
-                            </a>
+                            </figure>
+                        </a>
 
-                        </li>
-                        <li class="box">
-                            <a href="#" class="thumnail">
-                                <figure>
-                                    <img src="img/sample_photo3.jpg" alt="霧島市H様リビング">
-                                    <figcaption>
-                                        霧島市<br>
-                                        H様邸
-                                    </figcaption>
-                                </figure>
-                            </a>
+                    </li>
+                    <li class="box">
+                        <a href="#" class="thumnail">
+                            <figure>
+                                <img src="img/sample_photo3.jpg" alt="霧島市H様リビング">
+                                <figcaption>
+                                    霧島市<br>
+                                    H様邸
+                                </figcaption>
+                            </figure>
+                        </a>
 
-                        </li>
-                        <li class="box">
-                            <a href="#" class="thumnail">
-                                <figure>
-                                    <img src="img/sample_photo4.jpg" alt="鹿児島市K様リビング">
-                                    <figcaption>
-                                        鹿児島市<br>
-                                        K様邸
-                                    </figcaption>
-                                </figure>
-                            </a>
+                    </li>
+                    <li class="box">
+                        <a href="#" class="thumnail">
+                            <figure>
+                                <img src="img/sample_photo4.jpg" alt="鹿児島市K様リビング">
+                                <figcaption>
+                                    鹿児島市<br>
+                                    K様邸
+                                </figcaption>
+                            </figure>
+                        </a>
 
-                        </li>
-                        <li class="box">
-                            <a href="#" class="thumnail">
-                                <figure>
-                                    <img src="img/sample_photo5.jpg" alt="薩摩川内市N様リビング">
-                                    <figcaption>
-                                        薩摩川内市<br>
-                                        N様邸
-                                    </figcaption>
-                                </figure>
-                            </a>
+                    </li>
+                    <li class="box">
+                        <a href="#" class="thumnail">
+                            <figure>
+                                <img src="img/sample_photo5.jpg" alt="薩摩川内市N様リビング">
+                                <figcaption>
+                                    薩摩川内市<br>
+                                    N様邸
+                                </figcaption>
+                            </figure>
+                        </a>
 
-                        </li>
-                        <li class="box">
-                            <a href="#" class="thumnail">
-                                <figure>
-                                    <img src="img/sample_photo6.jpg" alt="薩摩川内市M様リビング">
-                                    <figcaption>
-                                        薩摩川内市<br>
-                                        M様邸
-                                    </figcaption>
-                                </figure>
-                            </a>
+                    </li>
+                    <li class="box">
+                        <a href="#" class="thumnail">
+                            <figure>
+                                <img src="img/sample_photo6.jpg" alt="薩摩川内市M様リビング">
+                                <figcaption>
+                                    薩摩川内市<br>
+                                    M様邸
+                                </figcaption>
+                            </figure>
+                        </a>
 
-                        </li>
-                    </ul>
-                    <div class="btn"><a href="works.html">MORE</a></div>
-                </div>
+                    </li>
+                </ul>
+                <div class="btn"><a href="works.html">MORE</a></div>
+            </div>
 
-                <div id="news">
+            <div id="news">
 
-                    <h2>新着情報</h2>
-                    <h3>news</h3>
-                    <dl>
-                        <dt>2015.07.22</dt>
-                        <dd>これはダミーのホームページです。Winスクールの卒業作品として作成しました。</dd>
-                        <dt>2015.07.22</dt>
-                        <dd>素材ご提供：晃栄住宅様</dd>
-                    </dl>
-                </div>
-                <p class="pagetop"><a href="#wrapper"><img src="img/pagetop.png" alt="pageTop"></a></p>
-            </main>
-            <footer id="foot">
-                <div id="footer_inside">
-                    <div id="name"><a href="access.html">アース＆ライフ<br>一級建築士事務所</a></div>
-                    <address>
-                        <span>〒890-0053</span><span>鹿児島県鹿児島市中央町18-1</span>
-                        <span>TEL099-000-0000</span><span>FAX099-000-0001</span>
-                    </address>
-                </div>
-                <div>
-                    <p>Copyright &copy; earth&amp;life.All Right Reserved</p>
-                </div>
-            </footer>
-        </div>
-    </body>
+                <h2>新着情報</h2>
+                <h3>news</h3>
+                <dl>
+                    <dt>2015.07.22</dt>
+                    <dd>これはダミーのホームページです。Winスクールの卒業作品として作成しました。</dd>
+                    <dt>2015.07.22</dt>
+                    <dd>素材ご提供：晃栄住宅様</dd>
+                </dl>
+            </div>
+            <p class="pagetop"><a href="#wrapper"><img src="img/pagetop.png" alt="pageTop"></a></p>
+        </main>
+        <footer id="foot">
+            <div id="footer_inside">
+                <div id="name"><a href="access.html">アース＆ライフ<br>一級建築士事務所</a></div>
+                <address>
+                    <span>〒890-0053</span><span>鹿児島県鹿児島市中央町18-1</span>
+                    <span>TEL099-000-0000</span><span>FAX099-000-0001</span>
+                </address>
+            </div>
+            <div>
+                <p>Copyright &copy; earth&amp;life.All Right Reserved</p>
+            </div>
+        </footer>
+    </div>
+</body>
 
 </html>
