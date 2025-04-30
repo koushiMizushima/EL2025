@@ -22,12 +22,26 @@
     <script src="js/masonry.pkgd.min.js"></script>
     <link rel="stylesheet" href="css/masonry.css">
 
-    <script src="js/pageTop.js"></script> <!--ページトップ移動 -->
-    <script src="js/anchor.js"></script> <!--ページ内移動 -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/masonry_custom.css">
 
 
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('a[href^=#]').click(function () {
+                var speed = 1000;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                console.log("ssss" + target)
+                var position = target.offset().top;
+                $("html, body").animate({
+                    scrollTop: position
+                }, speed, "swing");
+                return false;
+            });
+        });
+    </script>
     <script>
         $(document).ready(function () {
             $(".drawer").drawer();//class="drawer"を持つ要素にdrawerを設定する
@@ -77,25 +91,6 @@
             });
         });
     </script>
-    <!--アンカー移動-->
-    <script>
-        $(document).ready(function () {
-            // #で始まるアンカーをクリックした場合に処理
-            $('a[href^=#]').click(function () {
-                // スクロールの速度
-                var speed = 500; // ミリ秒
-                // アンカーの値取得
-                var href = $(this).attr("href");
-                // 移動先を取得
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                // 移動先を数値で取得
-                var position = target.offset().top;
-                // スムーススクロール
-                $('body,html').animate({ scrollTop: position }, speed, 'swing');
-                return false;
-            });
-        });
-    </script>
 </head>
 
 <body id="home" class="drawer drawer--left">
@@ -107,7 +102,7 @@
         <header id="head" class="drawer-main drawer-default">
             <nav class="drawer-nav" role="navigation">
                 <ul class="drawer-nav-list">
-                    <li><a href="index.html#greeting">greeting</a></li>
+                    <li><a href="#greeting">greeting</a></li>
                     <li><a href="about.html">about</a></li>
                     <li><a href="news.html">news</a></li>
                     <li><a href="works.html">works</a></li>
