@@ -25,7 +25,7 @@
 
 #gMap dt {
     padding: 0.2em 3px;
-    margin: 0;
+    margin: 0.2em 0;
     width: 3em;
     border: 1px solid #333;
 }
@@ -36,7 +36,7 @@
     /* -1 は計算結果の小数点以下によるカラム落ち対策*/
     text-align: left;
     padding: 0.2em 0 0.2em 8px;
-    margin: 0;
+    margin: 0.2em 0;
 }
 
 #gMap dd span {
