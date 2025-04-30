@@ -1,0 +1,44 @@
+#gMap {
+    margin: 0 auto 50px;
+    width: 90%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    /*表示サイズを１６：９に */
+    ;
+}
+
+#gMap iframe {
+    /*iframeに対して縦横が指定されてしまっているので親のサイズに併せて変化するように変更*/
+    width: 100%;
+    height: 100%;
+}
+
+
+#gMap dl {
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 0.5em auto;
+    ;
+}
+
+#gMap dt {
+    padding: 0.2em 3px;
+    margin: 0;
+    width: 3em;
+    border: 1px solid #333;
+}
+
+#gMap dd {
+    box-sizing: border-box;
+    width: calc(100% - 3em - (3px * 2) - (1px * 2) - 1px);
+    /* -1 は計算結果の小数点以下によるカラム落ち対策*/
+    text-align: left;
+    padding: 0.2em 0 0.2em 8px;
+    margin: 0;
+}
+
+#gMap dd span {
+    white-space: nowrap;
+}
