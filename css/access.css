@@ -42,3 +42,87 @@
 #gMap dd span {
     white-space: nowrap;
 }
+
+
+
+
+#contact_list {
+    width: 90%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    font-size: 17px;
+    line-height: 2em;
+}
+
+#contact_list tr .table_h {
+    background-color: #dcdcdc;
+    line-height: 3em;
+    padding-left: 10px;
+}
+
+#contact_list tr .table_h p span {
+    font-size: 12px;
+    border: 1px solid;
+    padding: 3px;
+    margin-right: 8px;
+}
+
+#contact_list tr .table_con {
+    padding: 10px 0 50px 20px;
+}
+
+#contact_list tr .table_con span {
+    display: inline-block;
+    ;
+    min-width: 5em;
+}
+
+#contact_list tr .table_con input[type=text],
+input[type=tel],
+input[type=email],
+select {
+    height: 1.765em;
+    /*元のサイトで30pxだったので文字サイズから算出*/
+    line-height: 2.588;
+    /*テキストを上下中央に（inputなので大丈夫なはずだけど念のため）*/
+}
+
+textarea {
+    width: 90%;
+    max-width: 640px;
+    height: 16em;
+}
+
+
+label.error {
+    font-size: 13px;
+    color: #cc0000;
+    padding-left: 10px;
+    margin-top: -10px;
+}
+
+
+input.btn {
+    display: block;
+    width: 90%;
+    font-size: 18px;
+    line-height: 2.444em;
+    /*padding併せて44px程度だったので文字サイズから算出*/
+    font-weight: 900;
+    color: #F9be00;
+    background-color: #FFFFFF;
+    transition: background-color 0.6s ease 0s, color 0.6s ease 0s;
+}
+
+input.btn:hover {
+    color: #fff;
+    background-color: #F9be00;
+}
+
+@media screen and (min-width:769px) {
+    input.btn {
+        max-width: 342px;
+    }
+}

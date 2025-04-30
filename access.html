@@ -62,6 +62,30 @@
             });
         });
     </script>
+
+
+    <!--フォームチェック-->
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/messages_ja.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("form").validate({
+                rules: {
+                    tel: {
+                        digits: true,
+                        maxlength: 4,
+                        minlength: 1
+                    },
+                    yubin: {
+                        digits: true,
+                    },
+                    todouhuken: {
+                        required: true
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 
 <body id="home" class="drawer drawer--left">
@@ -115,7 +139,263 @@
                 </dl>
             </section>
 
-
+            <h2>お問い合わせ・資料請求</h2>
+            <h3>contact us</h3>
+            <form name="" action="" method="post">
+                <table id="contact_list">
+                    <tr>
+                        <td class="table_h">
+                            <p><span>必須</span>お問い合わせ内容</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_con"><input class="required" type="checkbox" name="what" value="資料請求"
+                                id="what1" />
+                            &nbsp;
+                            <label for="what1">資料請求</label>
+                            <br>
+                            <input class="required" type="checkbox" name="what" value="当社業務に関するお問い合わせ" id="what2" />
+                            &nbsp;
+                            <label for="what2">当社業務に関するお問い合わせ</label>
+                            <br>
+                            <input class="required" type="checkbox" name="what" value="見学会に関するお問い合わせ" id="what3" />
+                            &nbsp;
+                            <label for="what3">見学会に関するお問い合わせ</label>
+                            <br>
+                            <label for="what" class="error"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_h">
+                            <p><span>必須</span>お名前</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_con"><input name="your-name" type="text" class="required" value="" size="30" />
+                            <br>
+                            <label for="your-name" class="error"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_h">
+                            <p><span>必須</span>ふりがな</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_con"><input name="hurigana" type="text" class="required" value="" size="30" />
+                            <br>
+                            <label for="hurigana" class="error"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_h">
+                            <p><span>必須</span>ご住所</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_con">
+                            <span>郵便番号</span>
+                            <input name="yubin" type="text" class="required" value="" size="10" maxlength="3" />
+                            -
+                            <input name="yubin" type="text" class="required" value="" size="10" maxlength="4" />
+                            <br>
+                            <label for="yubin" class="error"></label>
+                            <br>
+                            <span>都道府県</span>
+                            <select name="todouhuken">
+                                <option value="">---</option>
+                                <option value="北海道">北海道</option>
+                                <option value="青森県">青森県</option>
+                                <option value="岩手県">岩手県</option>
+                                <option value="宮城県">宮城県</option>
+                                <option value="秋田県">秋田県</option>
+                                <option value="山形県">山形県</option>
+                                <option value="福島県">福島県</option>
+                                <option value="茨城県">茨城県</option>
+                                <option value="栃木県">栃木県</option>
+                                <option value="群馬県">群馬県</option>
+                                <option value="埼玉県">埼玉県</option>
+                                <option value="千葉県">千葉県</option>
+                                <option value="東京都">東京都</option>
+                                <option value="神奈川県">神奈川県</option>
+                                <option value="新潟県">新潟県</option>
+                                <option value="富山県">富山県</option>
+                                <option value="石川県">石川県</option>
+                                <option value="福井県">福井県</option>
+                                <option value="山梨県">山梨県</option>
+                                <option value="長野県">長野県</option>
+                                <option value="岐阜県">岐阜県</option>
+                                <option value="静岡県">静岡県</option>
+                                <option value="愛知県">愛知県</option>
+                                <option value="三重県">三重県</option>
+                                <option value="滋賀県">滋賀県</option>
+                                <option value="京都府">京都府</option>
+                                <option value="大阪府">大阪府</option>
+                                <option value="兵庫県">兵庫県</option>
+                                <option value="奈良県">奈良県</option>
+                                <option value="和歌山県">和歌山県</option>
+                                <option value="鳥取県">鳥取県</option>
+                                <option value="島根県">島根県</option>
+                                <option value="岡山県">岡山県</option>
+                                <option value="広島県">広島県</option>
+                                <option value="山口県">山口県</option>
+                                <option value="徳島県">徳島県</option>
+                                <option value="香川県">香川県</option>
+                                <option value="愛媛県">愛媛県</option>
+                                <option value="高知県">高知県</option>
+                                <option value="福岡県">福岡県</option>
+                                <option value="佐賀県">佐賀県</option>
+                                <option value="長崎県">長崎県</option>
+                                <option value="熊本県">熊本県</option>
+                                <option value="大分県">大分県</option>
+                                <option value="宮崎県">宮崎県</option>
+                                <option value="鹿児島県">鹿児島県</option>
+                                <option value="沖縄県">沖縄県</option>
+                            </select>
+                            <br>
+                            <label for="todouhuken" class="error"></label>
+                            <br>
+                            <span>市町村</span>
+                            <input class="required" type="text" name="sichoson" value="" size="40" />
+                            <br><span>
+                                <label for="sichoson" class="error"></label>
+                                <br>
+                                <span>建物名・部屋番号</span>
+                                <input class="required" type="text" name="tatemono" value="" size="40" />
+                                <br>
+                                <label for="tatemono" class="error"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_h">
+                            <p><span>必須</span>お電話番号</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_con"><input name="tel" type="tel" class="required" value="" size="10" />
+                            -
+                            <input name="tel" type="tel" class="required" value="" size="10" />
+                            -
+                            <input name="tel" type="tel" class="required" value="" size="10" />
+                            <br>
+                            <label for="tel" class="error"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_h">
+                            <p><span>必須</span>メールアドレス</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_con"><input class="email required" type="email" name="your-email" value=""
+                                size="40" />
+                            <br>
+                            <label for="your-email" class="error"></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_h">当社を知ったきっかけ</td>
+                    </tr>
+                    <tr>
+                        <td class="table_con"><input type="checkbox" name="kikkake" value="WEB検索" id="kikkake1" />
+                            &nbsp;
+                            <label for="kikkake1">WEB検索</label>
+                            <br>
+                            <input type="checkbox" name="kikkake" value="広告・チラシ等を見て" id="kikkake2" />
+                            &nbsp;
+                            <label for="kikkake2">広告・チラシ等を見て</label>
+                            <br>
+                            <input type="checkbox" name="kikkake" value="見学会など" id="kikkake3" />
+                            &nbsp;
+                            <label for="kikkake3">見学会など</label>
+                            <br>
+                            <input type="checkbox" name="kikkake" value="知人等からのご紹介" id="kikkake4" />
+                            &nbsp;
+                            <label for="kikkake4">知人等からのご紹介</label>
+                            <br>
+                            <input type="checkbox" name="kikkake" value="その他" id="kikkake5" />
+                            &nbsp;
+                            <label for="kikkake5">その他</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_h">マイホーム建築のご予定</td>
+                    </tr>
+                    <tr>
+                        <td class="table_con"><input type="checkbox" name="yotei" value="土地があればすぐに建てたい" id="yotei1" />
+                            &nbsp;
+                            <label for="yotei1">土地があればすぐに建てたい</label>
+                            <br>
+                            <input type="checkbox" name="yotei" value="1年以内に建てたいと考えている" id="yotei2" />
+                            &nbsp;
+                            <label for="yotei2">1年以内に建てたいと考えている</label>
+                            <br>
+                            <input type="checkbox" name="yotei" value="5年以内に建てたいと考えている" id="yotei3" />
+                            &nbsp;
+                            <label for="yotei3">5年以内に建てたいと考えている</label>
+                            <br>
+                            <input type="checkbox" name="yotei" value="建てたいと考えているが予定はない" id="yotei4" />
+                            &nbsp;
+                            <label for="yotei4">建てたいと考えているが予定はない</label>
+                            <br>
+                            <input type="checkbox" name="yotei" value="全く予定はない" id="yotei5" />
+                            &nbsp;
+                            <label for="yotei5">全く予定はない</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_h">家づくりで重視しているポイント(複数可)</td>
+                    </tr>
+                    <tr>
+                        <td class="table_con"><input type="checkbox" name="point" value="立地（場所）" id="point1" />
+                            &nbsp;
+                            <label for="point1">立地（場所）</label>
+                            <br>
+                            <input type="checkbox" name="point" value="価格" id="point2" />
+                            &nbsp;
+                            <label for="point2">価格</label>
+                            <br>
+                            <input type="checkbox" name="point" value="デザイン（外観）" id="point3" />
+                            &nbsp;
+                            <label for="point3">デザイン（外観）</label>
+                            <br>
+                            <input type="checkbox" name="point" value="間取り・インテリア" id="point4" />
+                            &nbsp;
+                            <label for="point4">
+                                間取り・インテリア<br>
+                                <input type="checkbox" name="point" value="構造" id="point5" />
+                                &nbsp;
+                                <label for="point5">構造</label>
+                                <br>
+                                <input type="checkbox" name="point" value="快適性" id="point6" />
+                                &nbsp;
+                                <label for="point6">快適性</label>
+                                <br>
+                                <input type="checkbox" name="point" value="健康への配慮" id="point7" />
+                                &nbsp;
+                                <label for="point7">健康への配慮</label>
+                                <br>
+                                <input type="checkbox" name="point" value="太陽光発電等の設備" id="point8" />
+                                &nbsp;
+                                <label for="point8">太陽光発電等の設備</label>
+                                <br>
+                                <input type="checkbox" name="point" value="その他" id="point9" />
+                                &nbsp;
+                                <label for="point9">その他</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table_h">お問い合わせ内容</td>
+                    </tr>
+                    <tr>
+                        <td class="table_con"><textarea name="your-message" cols="40" rows="10"
+                                maxlength="40"></textarea></td>
+                    </tr>
+                </table>
+                <p>
+                    <input class="btn" type="submit" value="送信" />
+                </p>
+            </form>
             <p class="pagetop"><a href="#wrapper"><img src="img/pagetop.png" alt="pageTop"></a></p>
 
 
