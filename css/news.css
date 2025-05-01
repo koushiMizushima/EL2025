@@ -8,7 +8,7 @@
 
 .main_contents dl {
     display: flex;
-    font-size: 13px;
+    font-size: 1.3rem;
     flex-wrap: wrap;
     width: 90%;
     max-width: 320px;
@@ -45,7 +45,7 @@
     .main_contents {
         padding: 0 10px;
         box-sizing: border-box;
-        font-size: 15px;
+        font-size: 1.5rem;
         line-height: 1.8;
         max-width: 1024px;
     }

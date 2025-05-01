@@ -15,7 +15,7 @@
 
 
 #gMap dl {
-    font-size: 15px;
+    font-size: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -52,7 +52,7 @@
     margin: 0 auto;
     padding: 0;
     text-align: left;
-    font-size: 17px;
+    font-size: 1.7rem;
     line-height: 2em;
 }
 
@@ -63,7 +63,7 @@
 }
 
 #contact_list tr .table_h p span {
-    font-size: 12px;
+    font-size: 1.2rem;
     border: 1px solid;
     padding: 3px;
     margin-right: 8px;
@@ -97,7 +97,7 @@ textarea {
 
 
 label.error {
-    font-size: 13px;
+    font-size: 1.3rem;
     color: #cc0000;
     padding-left: 10px;
     margin-top: -10px;
@@ -107,7 +107,7 @@ label.error {
 input.btn {
     display: block;
     width: 90%;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 2.444em;
     /*padding併せて44px程度だったので文字サイズから算出*/
     font-weight: 900;

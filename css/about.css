@@ -1,36 +1,38 @@
-
-.main_contents{
-    padding:20px;
+.main_contents {
+    padding: 20px;
 }
 
-.main_contents figure{
-display:flex;
-flex-direction:column;
+.main_contents figure {
+    display: flex;
+    flex-direction: column;
 }
-.main_contents img{
-    max-width:90%;
-        height: fit-content;
+
+.main_contents img {
+    max-width: 90%;
+    height: fit-content;
 }
-.main_contents figcaption{
-    line-height:150%;
-    text-align:left;
-    font-size:15px;
+
+.main_contents figcaption {
+    line-height: 150%;
+    text-align: left;
+    font-size: 1.5rem;
 }
 
 
 
-@media screen and (min-width:769px){
-    .main_contents figure{
-    flex-direction:row;
+@media screen and (min-width:769px) {
+    .main_contents figure {
+        flex-direction: row;
     }
 
-    .main_contents img{
-       margin-right:5%;
-       width:45%;
+    .main_contents img {
+        margin-right: 5%;
+        width: 45%;
     }
-    .main_contents figcaption{
-        margin-top:10px;
-        width:50%;
+
+    .main_contents figcaption {
+        margin-top: 10px;
+        width: 50%;
     }
 
 }
