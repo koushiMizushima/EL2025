@@ -37,6 +37,7 @@ pre,
 code,
 form,
 fieldset,
+figure,
 legend,
 input,
 textarea,
@@ -50,14 +51,21 @@ td {
     color: #535353;
 }
 
+
+h2 {
+    font-size: 1.95rem;
+}
+
 h3 {
-    font-size: 1.6;
+    font-size: 1.6rem;
     line-height: 120%;
     font-family: "Open Sans ", sans-serif;
-    font-weight: 300px;
+    font-weight: 300;
     letter-spacing: 0.2em;
     margin-bottom: 30px;
 }
+
+
 
 #wrapper {
     width: 100%;
@@ -180,8 +188,18 @@ h3 {
     padding: 1.5em 0;
 }
 
+
+.main_contents img {
+    width: 100%;
+    height: auto;
+}
+
+.main_contents div {
+    margin-top: 0.5em;
+}
+
 #name {
-    width: 120px;
+    width: 70%;
     border: 1px solid #8b8b8b;
     line-height: 1.5em;
     margin-bottom: 1.5em;
@@ -220,11 +238,9 @@ h3 {
 .btn {
     width: 140px;
     border: 1px solid #f9be00;
-    font-size: 1em;
-    /*意味ある？*/
+    font-size: 1.3rem;
     line-height: 120%;
     font-weight: 300;
-    /*意味ある？*/
     letter-spacing: 0.3em;
     margin: 10px auto 100px;
 }
@@ -250,7 +266,9 @@ h3 {
     /*元サイトとは異なり「min」にしている。*/
     /*よって以下は横幅768pxを1pxでも超えたら（769pxに到達したら）適用される*/
 
-
+    #name {
+        width: 120px;
+    }
 
     #content {
         padding-left: 180px;
@@ -277,6 +295,17 @@ h3 {
     #foot {
         max-width: 960px;
         padding-left: 180px;
+    }
+
+    #footer_inside {
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    #footer_inside address {
+        margin-left: 2em;
+        text-align: left;
+        width: 20em;
     }
 
     #footer_inside address span:nth-child(even) {

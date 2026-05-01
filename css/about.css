@@ -1,14 +1,21 @@
 .main_contents {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main_contents figure {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    flex-wrap: inherit; /*要素がはみ出るのを防ぐためにwrapさせる*/
 }
 
 .main_contents img {
-    max-width: 90%;
+    width: 100%;
+    max-width: 320px;
+    /*元画像サイズが320pxなので、これ以上大きくならないようにする*/
     height: fit-content;
 }
 

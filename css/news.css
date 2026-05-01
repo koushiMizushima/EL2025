@@ -1,10 +1,15 @@
 .main_contents {
     width: 80%;
     margin: 0 auto 50px;
+    padding: 20px;
     border: 1px dotted #535353;
+    box-sizing: border-box;
 }
 
-
+.main_contents img {
+    max-width: 320px;
+    ;
+}
 
 .main_contents dl {
     display: flex;
@@ -30,15 +35,31 @@
     text-align: left;
     padding-left: 1em;
     margin-bottom: 0.5em;
+    font-size: 1.5rem;
 }
 
 .main_contents p {
     max-width: 320px;
-    margin: 0 auto 1em;
+    margin: 0 auto 3em;
+    font-size: 1.5rem;
+    text-align: left;
 }
 
 .btn {
-    margin-bottom: 20px;
+    margin: 3em auto 10px;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width:481px) {
+    .main_contents dl {
+        max-width: none;
+        width: 100%;
+    }
+
+    .main_contents p {
+        max-width: none;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width:769px) {

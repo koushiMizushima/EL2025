@@ -1,69 +1,80 @@
-#slider li img{
-    width:1900px;
-    height:auto;
+#slider li img {
+    width: 1900px;
+    height: auto;
 }
 
 
 
 #greeting {
-    text-align:center;
-    margin:50px auto 80px;
-    max-width:80%;
+    text-align: center;
+    margin: 50px auto 80px;
+    max-width: 80%;
 }
 
-#greeting #title{
-    font-size:30px;
-    line-height:150%;
-    margin-bottom:1em;
+#greeting #title {
+    font-size: 30px;
+    line-height: 150%;
+    margin-bottom: 1em;
 }
 
-#greeting p{
-    font-size:15px;
-    line-height:250%;
-    margin-bottom:2.5em;
+#greeting p {
+    font-size: 15px;
+    line-height: 250%;
+    margin-bottom: 2.5em;
+    text-align: left;
 }
 
 
 
-#news{
-    max-width:960px;
-    margin:20px auto 80px;
-    padding:0 10px 100px;
-    text-align:center;
+#news {
+    max-width: 960px;
+    margin: 20px auto 80px;
+    padding: 0 10px 100px;
+    text-align: center;
 }
 
-#news dl{
-    text-align:left;
-    font-size:15px;
-    width:90%;
-    margin:0 auto;
+#news dl {
+    text-align: left;
+    font-size: 15px;
+    width: 90%;
+    margin: 0 auto;
 }
-#news dt{
-    font-style:italic;
+
+#news dt {
+    font-style: italic;
     font-family: "Open Sans", sans-serif;
-    letter-spacing:0.03em;
+    letter-spacing: 0.03em;
 }
 
-#news dd{
-    padding:20px 30px;
-    border-bottom:1px solid #adadad;
-    margin-bottom:1em;
+#news dd {
+    padding: 20px 30px;
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 1em;
 }
 
-@media screen and (min-width:769px){
+@media screen and (min-width:481px) {
 
-    #news dl{
-        display:flex;
-        flex-wrap:wrap;
+    #greeting p {
+        text-align: center;
     }
-    #news dt{
+
+}
+
+@media screen and (min-width:769px) {
+    #news dl {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #news dt {
         width: 177px;
-         border-bottom:1px solid #adadad;
-    margin-bottom:1em;
+        border-bottom: 1px solid #adadad;
+        margin-bottom: 1em;
     }
-    #news dd{
-        padding-top:0;
-        box-sizing:border-box;
-        width :calc(100% - 177px);
+
+    #news dd {
+        padding-top: 0;
+        box-sizing: border-box;
+        width: calc(100% - 177px);
     }
 }
